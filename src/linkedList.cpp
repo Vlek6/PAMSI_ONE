@@ -44,9 +44,9 @@ void LinkedList::insertSpecificNode(std::string input_data, int input_id)
     Node *insert_node = new Node(input_data);
 
     assert(input_id >= 0);
-    
+
     Node *temp = head;
-    if (this->returnListLength() < input_id)
+    if (this->returnListLength() <= input_id)
     {
         throw std::logic_error("List out of index!");
         exit(1);
@@ -56,7 +56,6 @@ void LinkedList::insertSpecificNode(std::string input_data, int input_id)
         // std::cout << "Input ID: " << input_id << std::endl;
         while (temp->id != input_id)
         {
-            std::cout << temp->id << std::endl;
             temp = temp->next_node;
         }
         Node *swapped = new Node;
@@ -65,6 +64,22 @@ void LinkedList::insertSpecificNode(std::string input_data, int input_id)
         insert_node->next_node = swapped;
         this->printLinkedList();
     }
+    this->beamIds();
+}
+
+void LinkedList::deleteSpecificNode(int delete_id)
+{
+    Node* temp = head;
+    assert(delete_id >= 0);
+    assert(this->returnListLength() <= delete_id);
+    while (temp->id != delete_id)
+    {
+        temp = temp->next_node;
+    }
+    Node* to_delete_node = new Node;
+    to_delete_node = temp->next_node;
+    temp->next_node = to_delete_node->next_node;
+    delete to_delete_node;
     this->beamIds();
 }
 
