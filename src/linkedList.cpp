@@ -36,6 +36,7 @@ void LinkedList::insertNode(std::string input_data)
     // after finding tail of the list, new Node is appended
     // pushing Node to an end of list
     tmp->next_node = new_node;
+    this->beamIds();
 };
 
 void LinkedList::insertSpecificNode(std::string input_data, int input_id)

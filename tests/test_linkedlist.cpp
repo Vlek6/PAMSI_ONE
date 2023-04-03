@@ -32,3 +32,24 @@ TEST_CASE("returnListLength test")
     test_list.insertNode("SecNodeAppend");
     CHECK(test_list.returnListLength() == 2);
 }
+
+TEST_CASE("Inserting specific node to specific place")
+{
+    LinkedList test_list = LinkedList();
+    test_list.insertNode("FirstNodeAppend");
+    test_list.insertNode("SecNodeAppend");
+    CHECK(test_list.returnListLength() == 2);
+    test_list.insertSpecificNode("crack in list", 1);
+    CHECK(test_list.returnListLength() == 3);
+
+    int counter = 0;
+    Node* tmp = test_list.returnHead();
+    while(tmp != nullptr)
+    {
+        CHECK(tmp->id == counter);
+        ++counter;
+        tmp = tmp->next_node;
+    }
+}
+
+
