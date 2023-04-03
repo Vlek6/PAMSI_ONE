@@ -14,5 +14,24 @@ using namespace std;
 #include "linkedList.hpp"\
 
 int main() {
+  LinkedList list = LinkedList();
+  // list.insertNode("jeden");
+  // list.insertNode("dwa");
+  // list.insertNode("trzy");
+
+  // list.insertNode("cztery");
+  // list.insertNode("piencset");
+  // list.insertNode("szesc");
+  // list.printLinkedList();
+  // std::cout << "Losowanko" << std::endl;
+  // list.shuffleIds();
+  // list.printLinkedList();
+  std::string txt = "Lorem ipsum guacamole tesla haha awokdao robin hood kradl jablka";
+  list.messageCut(txt);
+  list.printLinkedList();
+  list.shuffleIds();
+  std::cout << "shuffle" << std::endl;
+  list.printLinkedList();
   return 0;
 }
+

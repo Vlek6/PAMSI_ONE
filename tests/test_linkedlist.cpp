@@ -52,4 +52,28 @@ TEST_CASE("Inserting specific node to specific place")
     }
 }
 
+TEST_CASE("Deletin specific node")
+{
+    LinkedList test = LinkedList();
+    test.insertNode("FirstNodeAppend");
+    test.insertNode("SecNodeAppend");
+    test.insertNode("ThNodeAppend");
+    // test.printLinkedList();
+    CHECK(test.returnListLength() == 3);
+    test.deleteSpecificNode(1);
+    CHECK(test.returnListLength() == 2);
+
+    // checking integrity of ids
+    int counter = 0;
+    Node* tmp = test.returnHead();
+    while(tmp != nullptr)
+    {
+        CHECK(tmp->id == counter);
+        ++counter;
+        tmp = tmp->next_node;
+    }
+    // test.printLinkedList();
+    std::cout << std::endl << "Length: " << test.returnListLength() << std::endl;
+}
+
 
