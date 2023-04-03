@@ -5,19 +5,14 @@
 #define DOCTEST_CONFIG_IMPLEMENT
 #include "doctest/doctest.h"
 #include "node.hpp"
+#include "linkedList.hpp"
 #endif
 
 #include <iostream>
 using namespace std;
 #include "node.hpp"
+#include "linkedList.hpp"\
 
 int main() {
-  cout << "It's been a long time";
-  Node* exm = new Node();
-  Node* exm_val = new Node("sialala");
-
-  cout << exm->data << endl << exm_val->data << endl;
-
-
   return 0;
 }

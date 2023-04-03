@@ -10,10 +10,7 @@ struct Node{
 
     Node();
     Node(std::string data);
+    void printNode();
 };
 
-class LinkedList {
-    Node* head;
-
-};
 
