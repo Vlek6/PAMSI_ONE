@@ -32,6 +32,9 @@ int main() {
   list.shuffleIds();
   std::cout << "shuffle" << std::endl;
   list.printLinkedList();
+  list.sortList();
+  std::cout << " - sort - " << std::endl;
+  list.printLinkedList();
   return 0;
 }
 

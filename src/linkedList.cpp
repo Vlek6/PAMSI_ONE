@@ -90,6 +90,19 @@ void LinkedList::deleteSpecificNode(int delete_id)
     }
 }
 
+void LinkedList::sortList()
+{
+    // Tutaj trzeba wymyslic cos smiesznego 
+    // LinkedList output_list = LinkedList();
+    // Node* temp = new Node();
+    // temp = head;
+    // while(temp != nullptr)
+    // {
+    //     output_list.insertSpecificNode(temp->data, temp->id);
+    //     temp = temp->next_node;
+    // }
+}
+
 void LinkedList::beamIds()
 {
     uint id_counter = 0;

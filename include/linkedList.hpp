@@ -13,6 +13,7 @@ class LinkedList {
         void insertNode(std::string input_data);
         void insertSpecificNode(std::string input_data, int insert_id);
         void deleteSpecificNode(int delete_id);
+        void sortList();
         void beamIds();
         void shuffleIds();
         void messageCut(std::string input_massage);
